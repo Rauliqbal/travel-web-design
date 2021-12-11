@@ -206,7 +206,7 @@ nav .icon-burger .line {
 }
 
 .section-title h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
 }
@@ -222,17 +222,22 @@ nav .icon-burger .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#about .content {
-  -webkit-box-flex: 40%;
-      -ms-flex: 40%;
-          flex: 40%;
+  gap: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #about .content p {
   font-size: 18px;
   padding: 32px 0;
+  width: 400px;
+  color: #767575;
+}
+
+#about .content a {
+  text-decoration: none;
+  font-weight: 600;
 }
 
 #about .image-container {
@@ -249,13 +254,16 @@ nav .icon-burger .line {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 32px;
 }
 
 #about .image {
   overflow: hidden;
-  margin-right: 24px;
   max-width: 250px;
   height: auto;
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
 }
 
 #about .image img {
@@ -273,6 +281,9 @@ nav .icon-burger .line {
   overflow: hidden;
   height: auto;
   max-width: 320px;
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
 }
 
 #about .image2 img {
@@ -353,6 +364,9 @@ nav .icon-burger .line {
         -ms-flex-order: 2;
             order: 2;
   }
+  #about .content p {
+    width: 100%;
+  }
   #about .image-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -361,14 +375,33 @@ nav .icon-burger .line {
 }
 
 @media screen and (max-width: 425px) {
+  .hero .content span {
+    font-size: 16px;
+  }
+  .hero .content h1 {
+    font-size: 40px;
+  }
+  .hero .content h1 span {
+    font-size: 40px;
+  }
+  .section-title h2 {
+    font-size: 24px;
+  }
   #about .content p {
     font-size: 16px;
   }
-  #about .image {
-    margin-right: 14px;
+  #about .image-container {
+    gap: 14px;
   }
-  #about .image2 {
-    max-width: 208px;
+  #about .image-container .image {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  #about .image-container .image2 {
+    -webkit-box-flex: 60%;
+        -ms-flex: 60%;
+            flex: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */

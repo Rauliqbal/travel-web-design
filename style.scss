@@ -186,7 +186,7 @@ nav {
 
 .section-title {
     h2 {
-        font-size: 24px;
+        font-size: 32px;
         font-weight: bold;
         font-family: $raleway;
     }
@@ -196,12 +196,20 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 32px;
+    justify-content: center;
 
     .content {
-        flex: 40%;
         p {
             font-size: 18px;
             padding: 32px 0;
+            width: 400px;
+            color: $text-body;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
         }
     }
     .image-container {
@@ -209,12 +217,13 @@ nav {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        gap: 32px;
     }
     .image {
         overflow: hidden;
-        margin-right: 24px;
         max-width: 250px;
         height: auto;
+        flex: 40%;
 
         img {
             width: 100%;
@@ -229,6 +238,7 @@ nav {
         overflow: hidden;
         height: auto;
         max-width: 320px;
+        flex: 60%;
 
         img {
             width: 100%;
@@ -304,6 +314,10 @@ nav {
 
         .content {
             order: 2;
+
+            p {
+                width: 100%;
+            }
         }
 
         .image-container {
@@ -313,17 +327,42 @@ nav {
 }
 
 @media screen and (max-width: 425px) {
+    .hero {
+        .content {
+            span {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+
+                span {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    .section-title {
+        h2 {
+            font-size: 24px;
+        }
+    }
     #about {
         .content {
             p {
                 font-size: 16px;
             }
         }
-        .image {
-            margin-right: 14px;
-        }
-        .image2 {
-            max-width: 208px;
+        .image-container {
+            gap: 14px;
+
+            .image {
+                flex: 50%;
+            }
+            .image2 {
+                flex: 60%;
+            }
         }
     }
 }
