@@ -23,7 +23,7 @@ section {
 }
 
 nav.sticky {
-  padding: 4px 10%;
+  padding: 0 10%;
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 25px rgba(0, 0, 0, 0.383);
           box-shadow: 0 4px 25px rgba(0, 0, 0, 0.383);
@@ -206,7 +206,7 @@ nav .icon-burger .line {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
 }
@@ -296,9 +296,63 @@ nav .icon-burger .line {
      object-fit: cover;
 }
 
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.discover .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.discover-container {
+  width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.discover-container .discover-card {
+  position: relative;
+  width: 237px;
+  overflow: hidden;
+}
+
+.discover-container .discover-card .discover-content {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+.discover-container .discover-card .discover-content .discover-title,
+.discover-container .discover-card .discover-content .discover-desc {
+  color: #ffffff;
+}
+
+.discover-container .discover-card .discover-content .discover-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.discover-container .discover-card .discover-content .discover-desc {
+  display: block;
+  font-size: 14px;
+}
+
+.discover-container .discover-card .discover-img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.discover-container .discover-card .discover-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 768px) {
   section {
-    padding: 110px 5%;
+    padding: 60px 5%;
   }
   nav .nav-menu {
     float: none;
@@ -378,6 +432,9 @@ nav .icon-burger .line {
     max-height: 450px;
     max-width: 100%;
   }
+  .discover-container {
+    width: 380px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -415,6 +472,9 @@ nav .icon-burger .line {
   #about .image-container .image2 {
     max-height: 240px;
     max-width: 100%;
+  }
+  .discover-container {
+    width: 330px;
   }
 }
 /*# sourceMappingURL=style.css.map */

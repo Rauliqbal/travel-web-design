@@ -33,7 +33,7 @@ section {
 }
 
 nav.sticky {
-    padding: 4px 10%;
+    padding: 0 10%;
     background-color: $white;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.383);
 
@@ -186,7 +186,7 @@ nav {
 
 .section-title {
     h2 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: bold;
         font-family: $raleway;
     }
@@ -253,10 +253,62 @@ nav {
     }
 }
 
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.discover {
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+.discover-container {
+    width: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .discover-card {
+        position: relative;
+        width: 237px;
+        overflow: hidden;
+
+        .discover-content {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+
+            .discover-title,
+            .discover-desc {
+                color: $white;
+            }
+
+            .discover-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            .discover-desc {
+                display: block;
+                font-size: 14px;
+            }
+        }
+        .discover-img {
+            transition: all 0.5s;
+            width: 100%;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
 // Tablet
 @media screen and (max-width: 768px) {
     section {
-        padding: 110px 5%;
+        padding: 60px 5%;
     }
     nav {
         .nav-menu {
@@ -336,6 +388,9 @@ nav {
             }
         }
     }
+    .discover-container {
+        width: 380px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -391,5 +446,8 @@ nav {
                 max-width: 100%;
             }
         }
+    }
+    .discover-container {
+        width: 330px;
     }
 }
