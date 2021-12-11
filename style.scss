@@ -218,36 +218,37 @@ nav {
         align-items: center;
         justify-content: center;
         gap: 32px;
-    }
-    .image {
-        overflow: hidden;
-        max-width: 250px;
-        height: auto;
-        flex: 40%;
 
-        img {
-            width: 100%;
-            transition: all 0.3s ease-in-out;
+        .image {
+            overflow: hidden;
+            max-height: 370px;
+            border-radius: 10px;
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
         }
+        .image2 {
+            overflow: hidden;
+            border-radius: 10px;
+            max-height: 450px;
+            width: 320px;
 
-        &:hover img {
-            transform: scale(1.1);
-        }
-    }
-    .image2 {
-        overflow: hidden;
-        height: auto;
-        max-width: 320px;
-        flex: 60%;
+            img {
+                max-width: 100%;
+                transition: all 0.3s ease-in-out;
+            }
 
-        img {
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-        }
-
-        &:hover img {
-            transform: scale(1.1);
-            object-fit: cover;
+            &:hover img {
+                transform: scale(1.1);
+                object-fit: cover;
+            }
         }
     }
 }
@@ -322,6 +323,17 @@ nav {
 
         .image-container {
             order: 1;
+            gap: 16px;
+
+            .image {
+                max-height: 360px;
+                max-width: 100%;
+            }
+
+            .image2 {
+                max-height: 450px;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -358,10 +370,12 @@ nav {
             gap: 14px;
 
             .image {
-                flex: 50%;
+                max-height: 220px;
+                max-width: 100%;
             }
             .image2 {
-                flex: 60%;
+                max-height: 250px;
+                max-width: 100%;
             }
         }
     }

@@ -257,42 +257,39 @@ nav .icon-burger .line {
   gap: 32px;
 }
 
-#about .image {
+#about .image-container .image {
   overflow: hidden;
-  max-width: 250px;
-  height: auto;
-  -webkit-box-flex: 40%;
-      -ms-flex: 40%;
-          flex: 40%;
+  max-height: 370px;
+  border-radius: 10px;
 }
 
-#about .image img {
-  width: 100%;
+#about .image-container .image img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#about .image:hover img {
+#about .image-container .image:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#about .image2 {
+#about .image-container .image2 {
   overflow: hidden;
-  height: auto;
-  max-width: 320px;
-  -webkit-box-flex: 60%;
-      -ms-flex: 60%;
-          flex: 60%;
+  border-radius: 10px;
+  max-height: 450px;
+  width: 320px;
 }
 
-#about .image2 img {
-  width: 100%;
+#about .image-container .image2 img {
+  max-width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#about .image2:hover img {
+#about .image-container .image2:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -o-object-fit: cover;
@@ -371,6 +368,15 @@ nav .icon-burger .line {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    gap: 16px;
+  }
+  #about .image-container .image {
+    max-height: 360px;
+    max-width: 100%;
+  }
+  #about .image-container .image2 {
+    max-height: 450px;
+    max-width: 100%;
   }
 }
 
@@ -394,14 +400,12 @@ nav .icon-burger .line {
     gap: 14px;
   }
   #about .image-container .image {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
+    max-height: 220px;
+    max-width: 100%;
   }
   #about .image-container .image2 {
-    -webkit-box-flex: 60%;
-        -ms-flex: 60%;
-            flex: 60%;
+    max-height: 250px;
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
