@@ -196,7 +196,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 32px;
+    gap: 48px;
     justify-content: center;
 
     .content {
@@ -370,11 +370,24 @@ nav {
             gap: 14px;
 
             .image {
-                max-height: 220px;
+                max-height: 230px;
+            }
+            .image2 {
+                max-height: 280px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #about {
+        .image-container {
+            .image {
+                max-height: 190px;
                 max-width: 100%;
             }
             .image2 {
-                max-height: 250px;
+                max-height: 240px;
                 max-width: 100%;
             }
         }

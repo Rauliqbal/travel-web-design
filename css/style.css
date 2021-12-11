@@ -222,7 +222,7 @@ nav .icon-burger .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 32px;
+  gap: 48px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -400,11 +400,20 @@ nav .icon-burger .line {
     gap: 14px;
   }
   #about .image-container .image {
-    max-height: 220px;
+    max-height: 230px;
+  }
+  #about .image-container .image2 {
+    max-height: 280px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #about .image-container .image {
+    max-height: 190px;
     max-width: 100%;
   }
   #about .image-container .image2 {
-    max-height: 250px;
+    max-height: 240px;
     max-width: 100%;
   }
 }
