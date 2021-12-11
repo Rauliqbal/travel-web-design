@@ -1,0 +1,329 @@
+// Fonts Google
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Pacifico&family=Raleway:wght@600&display=swap");
+
+// Variable SASS
+$primary: #067c43;
+$text-body: #767575;
+$black: #000000;
+$white: #ffffff;
+
+$open-sans: "Open Sans", sans-serif;
+$pacifico: "Pacifico", cursive;
+$raleway: "Raleway", sans-serif;
+
+// Style Body
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $open-sans;
+}
+section {
+    padding: 110px 9%;
+}
+.btn-primary {
+    color: $white;
+    background-color: $primary;
+    padding: 10px 24px;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+}
+
+nav.sticky {
+    padding: 4px 10%;
+    background-color: $white;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.383);
+
+    .logo {
+        color: $black;
+    }
+    .nav-menu {
+        a {
+            color: $black;
+
+            &:hover {
+                border-bottom: 3px solid $black;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .icon-burger {
+        cursor: pointer;
+        .line {
+            background: $black;
+        }
+    }
+}
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: $raleway;
+    height: 100px;
+    padding: 0 5%;
+    transition: all 0.5s;
+
+    .logo {
+        font-size: 36px;
+        font-family: $pacifico;
+        color: $white;
+        float: left;
+        width: 40%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        font-size: 36px;
+    }
+
+    .nav-menu {
+        font-size: 18px;
+        float: right;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-family: $raleway;
+            color: $white;
+            text-transform: capitalize;
+            margin-left: 32px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                border-bottom: 3px solid $white;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    #nav-toggle {
+        position: absolute;
+        opacity: 0;
+    }
+    .icon-burger {
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .line {
+            width: 30px;
+            height: 5px;
+            background: $white;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.hero {
+    background-image: url(../images/bg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .content {
+        padding: 0 9%;
+
+        span {
+            font-size: 18px;
+            color: $white;
+            font-weight: 500;
+        }
+        h1 {
+            font-size: 52px;
+            color: $white;
+            font-weight: 400;
+            margin: 12px 0 40px 0;
+
+            span {
+                font-size: 52px;
+                font-weight: 700;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+.socmed {
+    padding: 50px 9%;
+    display: flex;
+    margin-top: -170px;
+
+    .icon {
+        font-size: 32px;
+
+        a {
+            color: $white;
+            margin-right: 24px;
+            padding: 10px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: darken($white, 40%);
+            }
+        }
+    }
+}
+
+.section-title {
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: $raleway;
+    }
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .content {
+        flex: 40%;
+        p {
+            font-size: 18px;
+            padding: 32px 0;
+        }
+    }
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .image {
+        overflow: hidden;
+        margin-right: 24px;
+        max-width: 250px;
+        height: auto;
+
+        img {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+    .image2 {
+        overflow: hidden;
+        height: auto;
+        max-width: 320px;
+
+        img {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+            object-fit: cover;
+        }
+    }
+}
+
+// Tablet
+@media screen and (max-width: 768px) {
+    section {
+        padding: 110px 5%;
+    }
+    nav {
+        .nav-menu {
+            float: none;
+            position: fixed;
+            z-index: 9;
+            top: 100px;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            width: auto;
+            height: auto;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: $white;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+
+            a {
+                font-size: 20px;
+                margin: 0 auto;
+                color: $black;
+
+                &:hover {
+                    border-bottom: none;
+                    padding: none;
+                    color: $primary;
+                }
+            }
+        }
+
+        :checked ~ .nav-menu {
+            bottom: 0;
+        }
+
+        .icon-burger {
+            display: block;
+        }
+
+        :checked ~ .icon-burger {
+            .line:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            .line:nth-child(2) {
+                transform: scale(0);
+            }
+
+            .line:nth-child(3) {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    }
+    #about {
+        flex-direction: column;
+
+        .content {
+            order: 2;
+        }
+
+        .image-container {
+            order: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #about {
+        .content {
+            p {
+                font-size: 16px;
+            }
+        }
+        .image {
+            margin-right: 14px;
+        }
+        .image2 {
+            max-width: 208px;
+        }
+    }
+}
