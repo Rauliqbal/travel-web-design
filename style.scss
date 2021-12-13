@@ -12,13 +12,16 @@ $pacifico: "Pacifico", cursive;
 $raleway: "Raleway", sans-serif;
 
 // Style Body
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
     font-family: $open-sans;
 }
 section {
-    padding: 110px 9%;
+    padding: 80px 9%;
 }
 .btn-primary {
     color: $white;
@@ -126,7 +129,7 @@ nav {
     }
 }
 
-.hero {
+#hero {
     background-image: url(../images/bg-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -202,7 +205,7 @@ nav {
     .content {
         p {
             font-size: 18px;
-            padding: 32px 0;
+            margin: 24px 0 40px 0;
             width: 400px;
             color: $text-body;
         }
@@ -258,20 +261,20 @@ nav {
     background-image: none;
 }
 
-.discover {
+#discover {
     .section-title {
         text-align: center;
         margin-bottom: 40px;
     }
 }
 .discover-container {
-    width: 700px;
+    width: 826px;
     overflow: hidden;
     margin: 0 auto;
 
     .discover-card {
         position: relative;
-        width: 237px;
+        width: 280px;
         overflow: hidden;
 
         .discover-content {
@@ -305,6 +308,61 @@ nav {
     }
 }
 
+#explore {
+    .section-title h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .explore-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 52px;
+        column-gap: 34px;
+        justify-content: center;
+
+        .explore-card {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-width: 330px;
+
+            img {
+                width: 100%;
+            }
+
+            .explore-content {
+                background: $white;
+                position: absolute;
+                bottom: -32px;
+                left: 49px;
+                padding: 10px 40px;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                .explore-title {
+                    font-size: 24px;
+                }
+
+                .explore-location {
+                    color: $text-body;
+                    font-size: 14px;
+                }
+                span {
+                    font-size: 12px;
+                    color: $text-body;
+                }
+                span i {
+                    color: #ffd233;
+                    font-size: 12px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+}
 // Tablet
 @media screen and (max-width: 768px) {
     section {
@@ -448,6 +506,6 @@ nav {
         }
     }
     .discover-container {
-        width: 330px;
+        width: 310px;
     }
 }
